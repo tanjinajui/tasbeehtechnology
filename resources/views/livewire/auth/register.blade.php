@@ -15,6 +15,7 @@ new #[Layout('components.layouts.auth')] class extends Component {
     public string $email = '';
     public string $password = '';
     public string $password_confirmation = '';
+    public string $nip_no = '';
 
     /**
      * Handle an incoming registration request.
@@ -27,6 +28,7 @@ new #[Layout('components.layouts.auth')] class extends Component {
             'phone' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'lowercase', 'email', 'max:255', 'unique:' . User::class],
             'password' => ['required', 'string', 'confirmed', Rules\Password::defaults()],
+            'nip_no' => 'nullable',
         ]);
 
         $validated['password'] = Hash::make($validated['password']);
@@ -117,12 +119,22 @@ new #[Layout('components.layouts.auth')] class extends Component {
             autocomplete="new-password"
             placeholder="Confirm password"
         />
-        <flux:select id="version"
+        <flux:input
+            wire:model="nip_no"
+            id="nip_no"
+            :label="__('Nip No')"
+            type="string"
+            name="nip_no"
+            required
+            {{-- autocomplete="new-password" --}}
+            placeholder="Nip No"
+        />
+        {{-- <flux:select id="version"
         :label="__('Version')"
         name="version" wire:model="industry" placeholder="Choose Version...">
             <flux:select.option>Version 01</flux:select.option>
             <flux:select.option>Version 02</flux:select.option>
-        </flux:select>
+        </flux:select> --}}
         <div class="flex items-center justify-end">
             <flux:button type="submit" variant="primary" class="w-full">
                 {{ __('Create account') }}

@@ -23,15 +23,18 @@ use Termwind\Components\Dd;
 Route::get('/', function () {
     return view('home');
 })->name('home');
-Route::get('/practice', function () {
-    return view('practice');
-});
-Route::get('/about', function () {
-    return view('about');
-});
+Route::get('/terms-&-conditions', function () {
+    return view('terms-&-conditions');
+})->name('terms-&-conditions');
+Route::get('/career', function () {
+    return view('career');
+})->name('career');
 Route::get('/contact', function () {
     return view('contact');
 })->name('contact');
+Route::get('/search', function () {
+    return view('search');
+})->name('search');
 Route::get('/delete-popup',function(){
     return view('delete-popup');
 });

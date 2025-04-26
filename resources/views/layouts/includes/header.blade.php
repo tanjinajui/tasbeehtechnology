@@ -50,11 +50,11 @@
                                             <a class="nav-link active" href="{{ route('home') }}">Home</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="terms-&-conditions.blade.php">Terms &
+                                            <a class="nav-link" href="{{route('terms-&-conditions')}}">Terms &
                                                 Conditions</a>
                                         </li>         
                                         <li class="nav-item">
-                                            <a href="career.blade.php" class="nav-link" id="blod_pages">
+                                            <a href="{{ route('career') }}" class="nav-link" id="career_pages">
                                                 Career
                                             </a>
                                         </li>
@@ -70,13 +70,28 @@
                                                     <a href="{{ route('dashboard') }}" class="nav-link">Dashboard</a>
                                                 </li>
                                             @endif
+                                            <li class="nav-item">
+                                                <form method="POST" action="{{ route('logout') }}" class="w-full">
+                                                    @csrf
+                                                    <button class="btn logoutBtn">{{ __('Logout') }}</button>
+                                                    {{-- <flux:button as="button" type="submit" icon="arrow-right-start-on-rectangle" class="w-full">
+                                                        {{ __('Log Out') }}
+                                                    </flux:button> --}}
+                                                </form>
+                                                {{-- <form method="POST" action="{{ route('logout') }}" class="w-full">
+                                                    @csrf
+                                                    <a  class="nav-link">Logout</a>
+                                                </form> --}}
+                                                
+                                            </li>
                                         @else
                                             <li class="nav-item">
                                                 <a href="{{ route('login') }}" class="nav-link">Login</a>
                                             </li>
+                                            
                                         @endauth
                                         <li class="nav-item ">
-                                            <a href="search.blade.php" class="nav-link "><i
+                                            <a href="{{ route('search') }}" class="nav-link "><i
                                             class="fa fa-search searchBtn"></i></a>
                                         </li>
                                     </ul>

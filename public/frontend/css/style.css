@@ -98,7 +98,21 @@ CSS Index
         .main-menu-area {
           background: rgb(248 249 250) !important;
       }
-      
+      .logoutBtn {
+        text-align: center;
+        font-size: 28px;
+        color: #8ec866 !important;
+        margin-right: 10px !important;
+        border: none;
+        background: transparent;
+        padding: 20px 0;
+        transition: all linear 0.5s;
+    }
+    
+    .logoutBtn:hover {
+        color: #1f4606 !important;
+        font-size: 35px;
+    }
       i.searchBtn {
           font-size: 23px;
           color: #95ca74 !important;

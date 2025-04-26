@@ -1,7 +1,7 @@
 <!-- header and footer file master include -->
 @extends('layouts.includes.master')
 <!-- title set -->
-@section('title', 'Home')
+@section('title', 'Contact')
 @section('content')
     <!-- Start Hero Area -->
     <section class="hero-section height-470" data-aos="fade-up">
@@ -12,7 +12,7 @@
                         <div class="page-hrader text-white text-center">
                             <h1 class="display-3">Contact Form</h1>
                             <div class="page-breadcrumb">
-                                <p><a class="text-white" href="index.html">Home</a> - Contact Us</p>
+                                <p><a class="text-white" href="/">Home</a> - Contact Us</p>
                             </div>
                         </div>
                     </div>

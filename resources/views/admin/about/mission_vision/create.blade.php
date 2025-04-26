@@ -1,5 +1,5 @@
 <x-layouts.app>
-    <div class="flex flex-col gap-6">
+    <div class="flex flex-col gap-6 min-w-max">
         <x-auth-header title="Create Mission" description="" />
 
         <!-- Session Status -->
@@ -15,12 +15,12 @@
                     placeholder="Vision"  value="{{ old('vision') }}" />
             </div> --}}
             <div class="w-full">
-                <flux:textarea id="mission" class="mission w-full" :label="__('Mission')" type="text" name="mission" placeholder="Enter The Mission" value="{{ old('mission') }}" />
-                <flux:textarea id="vision" class="mission w-full" :label="__('Vision')" type="text" name="vision" placeholder="Enter The Vision" value="{{ old('vision') }}" />
-                {{-- <textarea id="mission" class="mission"  name="message" placeholder="Mission"></textarea> 
-                <br>
-
-                <textarea id="vision" class="mission"  name="message" placeholder="Mission"></textarea>  --}}
+                <flux:textarea id="mission" class="mission w-full" :label="__('Mission')" type="text" name="mission"
+                    placeholder="Enter The Mission" value="{{ old('mission') }}" />
+            </div>
+            <div class="w-full">
+                <flux:textarea id="vision" class="mission w-full" :label="__('Vision')" type="text"
+                    name="vision" placeholder="Enter The Vision" value="{{ old('vision') }}" />
             </div>
             <div class="flex items-center justify-end">
                 <flux:button type="submit" variant="primary" class="w-full">
@@ -29,15 +29,15 @@
             </div>
         </form>
     </div>
-      
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tinymce/7.6.1/tinymce.min.js"></script>
     <script type="text/javascript">
         tinymce.init({
-        // selector: '.mission',
-        selector: '#mission, #vision',
-        plugins: 'lists link image preview code',
-        toolbar: 'undo redo | styles | bold italic | alignleft aligncenter alignright alignjustify | outdent indent | code',
-        height: 300
-        });     
+            // selector: '.mission',
+            selector: '#mission, #vision',
+            plugins: 'lists link image preview code',
+            toolbar: 'undo redo | styles | bold italic | alignleft aligncenter alignright alignjustify | outdent indent | code',
+            height: 300
+        });
     </script>
 </x-layouts.app>

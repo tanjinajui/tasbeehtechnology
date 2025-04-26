@@ -126,6 +126,7 @@
       <div class="px-4 py-6 mx-auto max-w-7xl sm:px-6 lg:px-8 sm:flex sm:justify-between">
         <h1 class="text-3xl font-bold tracking-tight text-gray-900">{{$heading}}</h1>
         <x-button href="/jobs/create">Create Job</x-button>
+        <div id="google_translate_element"></div>
       </div>
     </header>
     <main>
@@ -136,6 +137,12 @@
       </div>
     </main>
   </div>
-  
+  <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+    }
+    </script>
+    
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
 </html>

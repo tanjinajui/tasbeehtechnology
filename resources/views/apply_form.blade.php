@@ -1,7 +1,7 @@
 <!-- header and footer file master include -->
 @extends('layouts.includes.master')
 <!-- title set -->
-@section('title', 'Home')
+@section('title', 'Madrasa Registration')
 @section('content')
     <!-- Start Hero Area -->
     <section class="hero-section height-470"
@@ -13,7 +13,7 @@
                         <div class="text-center text-white page-hrader">
                             <h1 class="display-3">New Madrasa Registration For Free</h1>
                             <div class="page-breadcrumb">
-                                <p><a class="text-white" href="index.html">Home</a> - Apply</p>
+                                <p><a class="text-white" href="/">Home</a> - Apply</p>
                             </div>
                         </div>
                     </div>

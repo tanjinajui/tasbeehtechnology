@@ -23,8 +23,8 @@
                 @foreach ($mission_vision as $item)
                     <tr class="even:bg-slate-50 dark:even:bg-zinc-700">
                         {{-- <td class="p-4">{{ ++$i }}</td> --}}
-                        <td class="p-4">{{ $item->mission }}</td>
-                        <td class="p-4">{{ $item->vision }}</td>
+                        <td class="p-4">{!! $item->mission !!}</td>
+                        <td class="p-4">{!! $item->vision !!}</td>
                         <td class="p-4">
                             <div class="flex gap-2">
                                 <flux:button href="{{ route('mission_vision.edit', $item->id) }}" variant="primary">Edit</flux:button>
@@ -45,7 +45,7 @@
     {{-- popup modal --}}
     <!-- Script -->
   
-    <div class="">
+    <div class="mt-3">
         {{ $mission_vision->links() }}
     </div>
 

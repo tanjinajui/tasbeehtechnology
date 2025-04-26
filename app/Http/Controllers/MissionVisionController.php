@@ -13,7 +13,7 @@ class MissionVisionController extends Controller
      */
     public function index()
     {
-        $mission_vision = MissionVision::paginate(2);
+        $mission_vision = MissionVision::paginate(20);
         return view('admin.about.mission_vision.index', compact('mission_vision'));
     }
 
